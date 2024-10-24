@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Drop Down</h1>
+    <main class="container mt-4">
+      <div>
+        <form>
+          <label for="dessertList" class="form-label">Dessert</label>
+          <select id="dessertList" class="form-select">
+            <option value="">Select</option>
+            <!-- 
+            <option value="1">Apple Pie</option>
+            <option value="2">Carrot Cake</option>
+            <option value="3">Tres Leches</option> 
+            -->
+          </select>
+        </form>
+      </div>
+    </main>
+    <script>
+      // get the elements into variables
+      "Use strict";
+
+      let topDessertsInUS = [
+    { id: 1, name: "Apple Pie" },
+    { id: 2, name: "Cheesecake" },
+    { id: 3, name: "Chocolate Chip Cookies" },
+    { id: 4, name: "Brownies" },
+    { id: 5, name: "Ice Cream" },
+    { id: 6, name: "Cupcakes" },
+    { id: 7, name: "Donuts" },
+    { id: 8, name: "Pumpkin Pie" },
+    { id: 9, name: "Key Lime Pie" },
+    { id: 10, name: "Banana Pudding" }
+];
+
+    let dessertList = document.getElementById("dessertList");
+      for (const dessert of topDessertsInUS) {
+        let option1 = document.createElement("option");
+        option1.value = dessert.id;
+        option1.innerText = dessert.name;
+        dessertList.appendChild(option1);
+      }
+
+      //   let option1 = document.createElement("option");
+      //   option1.value = "1";
+      //   option1.innerText = "Apple Pie";
+      //   dessertList.appendChild(option1);
+
+      //   let option2 = document.createElement("option");
+      //   option2.value = "2";
+      //   option2.innerText = "Carrot Cake";
+      //   dessertList.appendChild(option2);
+
+      //   let option3 = document.createElement("option");
+      //   option3.value = "3";
+      //   option3.innerText = "Tres Leches";
+      //   dessertList.appendChild(option3);
+    </script>
+  </body>
+</html>
